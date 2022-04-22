@@ -15,6 +15,9 @@
 - Order i18n translations alphabetically by key name.
 - Order model contents: constants, macros, public methods, private methods.
 - Put application-wide partials in the [`app/views/application`] directory.
+- Put classes (Service Objects/Interactors/et al) that may later be extracted
+  into a gem into `lib`. For things that can be run asychronously and don't need
+  to return anything, put them in `app/jobs`.
 - Use `def self.method`, not the `scope :method` DSL. #643
 - Use the default `render 'partial'` syntax over `render partial: 'partial'`.
 - Use `link_to` for GET requests, and `button_to` for other HTTP verbs.
